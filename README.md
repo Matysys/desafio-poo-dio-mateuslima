@@ -17,7 +17,7 @@ O Dev Mateus terminou o Bootcamp, o Dev João ainda está no início e a Dev Lua
 
 Também foram alterados os cursos e mentoria do Bootcamp.
 
-E, por último, foi adicionado uma média de idade dos inscritos no Bootcamp que será mostrada no console. O Mateus tem 23 anos (minha idade real no momento que fiz esse desafio), o João tem 27 anos e a Luana tem 30 anos. A média será de 26,67 anos de idade, e o código na classe ```Main` é esse abaixo:
+E, por último, foi adicionado uma média de idade dos inscritos no Bootcamp que será mostrada no console. O Mateus tem 23 anos (minha idade real no momento que fiz esse desafio), o João tem 27 anos e a Luana tem 30 anos. A média será de 26,67 anos de idade, e o código na classe ```Main``` é esse abaixo:
 ```java
 //Media de idade dos Devs inscritos
 System.out.println("-------");
