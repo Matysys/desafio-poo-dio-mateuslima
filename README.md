@@ -1,3 +1,63 @@
+# Alterações feitas por mim!
+
+A classe ```Endereco``` foi adicionada para permitir que cada Dev e Bootcamp tenha seu próprio endereço. Também pode ser interpretado de um jeito da qual o Bootcamp seja presencial.
+
+Atributos:
+- Rua
+- Cep
+- Endereco
+- Cidade
+- Estado
+
+Também foi adicionado o atributo ```idade``` dentro da classe Dev e a idade também será mostrada no console.
+
+Adicionado um curso a mais.
+
+O Dev Mateus terminou o Bootcamp, o Dev João ainda está no início e a Dev Luana está na metade.
+
+Também foram alterados os cursos e mentoria do Bootcamp.
+
+E por último foi adicionado uma média de idade dos inscritos no Bootcamp que será mostrada no console. O Mateus tem 23 anos (minha idade real no momento que fiz esse desafio), o João tem 27 anos e a Luana tem 30 anos. A média será de 26,67 anos de idade, e o código na classe ```Main` é esse abaixo:
+```java
+//Media de idade dos Devs inscritos
+System.out.println("-------");
+bootcamp.setIdadeDevs(devMateus.getIdade());
+bootcamp.setIdadeDevs(devJoao.getIdade());
+bootcamp.setIdadeDevs(devLuana.getIdade());
+bootcamp.setMediaIdadeDevs();
+String media = df.format(bootcamp.getMediaIdadeDevs());
+System.out.println("Idade média entre os inscritos do bootcamp: " + media);
+```
+O valor decimal será formatado com ajuda da classe ```DecimalFormat```.
+E o código dentro da classe ```Bootcamp``` para calcular a média.
+```java
+//Atributos
+private Set<Integer> idadeDevs = new HashSet<>();
+private Double mediaIdadeDevs;
+
+//Método de adicionar idade
+public void setIdadeDevs(Integer idadeDevs) {
+        this.idadeDevs.add(idadeDevs);
+        }
+
+//Método de calcular média
+public void setMediaIdadeDevs() {
+        double soma = 0.0;
+        for(double valor: idadeDevs){
+            soma += valor;
+        }
+
+        double media = soma/idadeDevs.size();
+
+        this.mediaIdadeDevs = media;
+    }
+```
+Enfim, foi isso! Abaixo estará a descrição do **fork** original.
+
+<---------------------------------------------------------------------------------------------------------------------------------->
+
+
+
 <h1> Desafio: Aprenda na Prática Programação Orientada a Objetos</h1>
 
 <p align="center"> 📜 <a href="https://academiapme-my.sharepoint.com/:p:/g/personal/camila_cavalcante_dio_me/EaXyYOjBaFpZjkxhexMo5EcBKMEEAI5t5aHlsTjnBQJlUw?e=nxdB6C"> SLIDES APRESENTADO NO PROJETO </a> 📜 </P>

@@ -4,6 +4,10 @@ import java.util.*;
 
 public class Dev {
     private String nome;
+
+    private Integer idade;
+
+    private Endereco endereco;
     private Set<Conteudo> conteudosInscritos = new LinkedHashSet<>();
     private Set<Conteudo> conteudosConcluidos = new LinkedHashSet<>();
 
@@ -60,6 +64,22 @@ public class Dev {
 
     public void setConteudosConcluidos(Set<Conteudo> conteudosConcluidos) {
         this.conteudosConcluidos = conteudosConcluidos;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
     }
 
     @Override

@@ -9,9 +9,39 @@ import java.util.Set;
 public class Bootcamp {
     private String nome;
     private String descricao;
+    private Endereco endereco;
+    private String patrocinio;
     private final LocalDate dataInicial = LocalDate.now();
     private final LocalDate dataFinal = dataInicial.plusDays(45);
     private Set<Dev> devsInscritos = new HashSet<>();
+    private Set<Integer> idadeDevs = new HashSet<>();
+    private Double mediaIdadeDevs;
+
+    public Set<Integer> getIdadeDevs() {
+        return idadeDevs;
+    }
+
+    public void setIdadeDevs(Integer idadeDevs) {
+        this.idadeDevs.add(idadeDevs);
+    }
+
+
+
+    public Double getMediaIdadeDevs() {
+        return mediaIdadeDevs;
+    }
+
+    public void setMediaIdadeDevs() {
+        double soma = 0.0;
+        for(double valor: idadeDevs){
+            soma += valor;
+        }
+
+        double media = soma/idadeDevs.size();
+
+        this.mediaIdadeDevs = media;
+    }
+
     private Set<Conteudo> conteudos = new LinkedHashSet<>();
 
 
@@ -66,5 +96,21 @@ public class Bootcamp {
     @Override
     public int hashCode() {
         return Objects.hash(nome, descricao, dataInicial, dataFinal, devsInscritos, conteudos);
+    }
+
+    public void setPatrocinio(String patrocinio) {
+        this.patrocinio = patrocinio;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public String getPatrocinio() {
+        return patrocinio;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
     }
 }
